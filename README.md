@@ -83,9 +83,34 @@ SHAP (SHapley Additive exPlanations) values are used for model interpretability 
 Create a virtual environment and install the required dependencies:
 ```bash
 python -m venv .venv
-source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
+```
+ Activate the virtual environment
+
+#### Windows (PowerShell)
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+#### Windows (Command Prompt)
+```cmd
+.venv\Scripts\activate.bat
+```
+#### Linux / macOS
+
+```bash
+source .venv/bin/activate
+```
+### Install the required dependencies
+
+Install all Python packages required by this project.
+
+```bash
 pip install -r requirements.txt
 ```
+
+### Download the dataset from the Google Drive link provided above and place it in:
+
+data/flight_with_weather.csv
+
 
 ### Running the Pipeline
 Execute the scripts sequentially from the root directory:
