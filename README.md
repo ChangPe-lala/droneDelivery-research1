@@ -13,23 +13,38 @@ This project processes raw telemetry and weather data to extract meaningful phys
 ## Repository Structure
 
 ```text
-Energy_Predict_abs/
-├── data/               # Contains raw and intermediate datasets (See Data Access)
-├── figures/            # Exploratory Data Analysis (EDA) and Model Evaluation plots
-├── logs/               # Execution logs and text reports from the pipelines
-├── models/             # Serialized pre-trained machine learning models (.pkl)
-├── output/             # Processed datasets (clean data, train/test splits)
-├── results/            # Performance metrics and cross-validation results (.csv)
-├── src/                # Source code directory
-│   ├── 00_check_clean_data.py         # Data cleaning, feature engineering, filtering
-│   ├── 01_train_test_split.py         # Data splitting using GroupKFold by date
-│   ├── 02_train_all_models.py         # Training and evaluating baseline & ensemble models
-│   ├── 03_train_model_B_no_duration.py# Training models excluding duration features
-│   ├── analyze_data.py                # Exploratory Data Analysis script
-│   └── check_total_flight.py          # Data validation utilities
-├── .gitignore          # Git ignore file
-├── requirements.txt    # Python dependencies
-└── README.md           # This document
+train_DTA/
+│
+├── .venv/                              # Python virtual environment
+├── catboost_info/                      # CatBoost training logs and information
+├── config/                             # Shared configuration and project settings
+├── data/                               # Raw, intermediate, and processed datasets
+├── docs/                               # Project documentation and research documents
+├── output/                             # Generated outputs, processed data, and results
+│
+├── src/                                # Source code directory
+│   ├── data_processing/
+│   │   ├── build_raw_dataset.py       # Build raw dataset from ROS bag data
+│   │   ├── data_cleaning.py            # Data cleaning and preprocessing
+│   │   └── feature_engineering.py      # Feature engineering and extraction
+│   │
+│   ├── modeling/
+│   │   ├── train_test_split.py         # Group-based train/test data splitting
+│   │   ├── train_models.py             # Model training and hyperparameter tuning
+│   │   └── evaluate_models.py          # Model evaluation and performance analysis
+│   │
+│   └── analysis/
+│       ├── ablation_study.py           # Feature contribution analysis
+│       ├── shap_analysis.py            # SHAP-based model explainability
+│       ├── route_analysis.py           # Route energy efficiency analysis
+│       ├── environmental_impact.py     # Environmental impact analysis
+│       ├── multihub_analysis.py        # Multi-hub route recommendation
+│       └── scheduling.py               # Delivery scheduling optimization
+│
+├── .gitignore                          # Git ignore file
+├── parameters.csv                      # Experiment and parameters
+├── requirements.txt                    # Python dependencies
+└── README.md                           # Project documentation
 ```
 
 ## Dataset & Data Access
