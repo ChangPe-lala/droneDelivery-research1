@@ -36,7 +36,6 @@ train_DTA/
 │       ├── ablation_study.py           # Feature contribution analysis
 │       ├── shap_analysis.py            # SHAP-based model explainability
 │       ├── route_analysis.py           # Route energy efficiency analysis
-│       ├── environmental_impact.py     # Environmental impact analysis
 │       ├── multihub_analysis.py        # Multi-hub route recommendation
 │       └── scheduling.py               # Delivery scheduling optimization
 │
