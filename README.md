@@ -19,7 +19,6 @@ train_DTA/
 ├── catboost_info/                      # CatBoost training logs and information
 ├── config/                             # Shared configuration and project settings
 ├── data/                               # Raw, intermediate, and processed datasets
-├── docs/                               # Project documentation and research documents
 ├── output/                             # Generated outputs, processed data, and results
 │
 ├── src/                                # Source code directory
